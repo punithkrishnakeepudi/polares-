@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hologram Video Converter</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    .upload-box { border: 2px dashed #666; padding: 40px; display: inline-block; border-radius: 10px; }
+    input[type=file] { margin: 20px 0; }
+    button { padding: 10px 20px; border: none; background: #007bff; color: white; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>🎥 Hologram Video Converter</h1>
+  <p>Upload a video and get it hologram-ready for your pyramid display!</p>
+  <div class="upload-box">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="video/*" required>
+      <br>
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+</body>
+</html>
