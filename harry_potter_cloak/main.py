@@ -261,13 +261,9 @@ while cap.isOpened():
     y += 20
     cv2.putText(panel, "Videos -> Videos/", (20, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (180, 180, 255), 1)
 
-    # Footer tagline (always 15px above bottom, with a safe strip)
-    cv2.rectangle(panel, (0, frame_height - 40), (panel_width, frame_height), (25, 25, 25), -1)
-
-    cv2.putText(panel, "Inspired by Harry Potter",
-                (20, frame_height - 15),  # fixed 15px from bottom
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.6, (200, 200, 200), 2, cv2.LINE_AA)
+    # Footer
+    cv2.putText(panel, "Inspired by Harry Potter", (20, frame_height - 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (200, 200, 200), 1)
 
     display = np.hstack((final_output, panel))
     cv2.imshow("Invisible Cloak", display)
